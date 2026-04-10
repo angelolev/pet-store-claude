@@ -1,0 +1,36 @@
+.summary {
+  background: var(--bg-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+  font-size: 13px;
+}
+
+.rowLabel {
+  color: var(--text-muted);
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: var(--space-md) 0;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+}
