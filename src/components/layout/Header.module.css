@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(254, 252, 249, 0.85);
+  background: var(--header-bg);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
@@ -110,7 +110,7 @@
     top: 64px;
     left: 0;
     right: 0;
-    background: rgba(254, 252, 249, 0.95);
+    background: var(--header-nav-mobile-bg);
     backdrop-filter: blur(12px);
     flex-direction: column;
     padding: var(--space-lg);

@@ -34,6 +34,43 @@
 
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
   --shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+
+  /* Tokens de superficie para header (necesitan canal alpha para backdrop-filter) */
+  --header-bg: rgba(254, 252, 249, 0.85);
+  --header-nav-mobile-bg: rgba(254, 252, 249, 0.95);
+}
+
+/* ─── Tema oscuro ────────────────────────────────────────────────────────────
+   Activar: document.documentElement.setAttribute('data-theme', 'dark')
+   Desactivar: document.documentElement.removeAttribute('data-theme')
+   ──────────────────────────────────────────────────────────────────────────── */
+[data-theme="dark"] {
+  /* Paleta base — superficie oscura con tinte frío coherente con el acento púrpura */
+  --bg: #1a1a1f;
+  --bg-card: #24242c;
+  --bg-accent: #20202a;
+
+  /* Tipografía — blanco cálido con leve tinte lavanda, muted con contraste AA */
+  --text: #f0eef8;
+  --text-muted: #9a97a8;
+
+  /* Separadores — más visibles que una sombra (las sombras desaparecen en dark) */
+  --border: #38364a;
+
+  /* Acento de marca — púrpura aclarado para contraste suficiente sobre fondo oscuro */
+  --cta: #a99fd4;
+  --cta-hover: #bdb5e0;
+
+  /* Rojo de oferta — ligeramente aclarado para legibilidad */
+  --sale: #e08a8a;
+
+  /* Sombras — prácticamente invisibles en dark; usar border en su lugar */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  /* Header — fondo oscuro con mismo alpha para el efecto blur */
+  --header-bg: rgba(26, 26, 31, 0.88);
+  --header-nav-mobile-bg: rgba(26, 26, 31, 0.97);
 }
 
 *,
