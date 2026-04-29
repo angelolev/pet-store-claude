@@ -1,0 +1,24 @@
+.page {
+  padding: var(--space-xl) 0;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: var(--space-lg);
+}
+
+.banner {
+  background: var(--color-primary, #2563eb);
+  color: #fff;
+  padding: var(--space-lg) var(--space-xl);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.phone {
+  color: #fff;
+  text-decoration: underline;
+}

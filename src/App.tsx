@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
 import CartPage from './pages/CartPage';
 import ProductDetailPage from './pages/ProductDetailPage';
+import SupportPage from './pages/SupportPage';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
             <Route path="/products/:category" element={<ProductsPage />} />
             <Route path="/product/:id" element={<ProductDetailPage />} />
             <Route path="/cart" element={<CartPage />} />
+            <Route path="/support" element={<SupportPage />} />
           </Route>
         </Routes>
       </CartProvider>
