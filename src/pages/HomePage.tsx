@@ -1,45 +1,10 @@
-import { Link, useNavigate } from "react-router-dom";
-import { products } from "../data/products";
-import { categories } from "../data/categories";
-import ProductGrid from "../components/product/ProductGrid";
-import CategoryIcon from "../components/product/CategoryIcon";
-import Button from "../components/ui/Button";
-import ServiceList, {
-  type ServiceItem,
-} from "../components/service/ServiceList";
-import styles from "./HomePage.module.css";
-import ServiceCard from "../components/ui/ServiceCard";
-
-const services: ServiceItem[] = [
-  {
-    id: "grooming",
-    image:
-      "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=200&h=220&fit=crop",
-    title: "Baño y corte",
-    description: "Incluye secado, cepillado y corte de uñas",
-    price: 250,
-    priceLabel: "desde",
-    href: "/servicios/grooming",
-  },
-  {
-    id: "vet",
-    image:
-      "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=200&h=220&fit=crop",
-    title: "Consulta veterinaria",
-    description: "Revisión general y vacunación",
-    price: 450,
-    href: "/servicios/veterinaria",
-  },
-  {
-    id: "training",
-    image:
-      "https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=200&h=220&fit=crop",
-    title: "Entrenamiento canino",
-    description: "Sesiones de obediencia básica y socialización",
-    price: 1600,
-    href: "/servicios/entrenamiento",
-  },
-];
+import { Link, useNavigate } from 'react-router-dom';
+import { products } from '../data/products';
+import { categories } from '../data/categories';
+import ProductGrid from '../components/product/ProductGrid';
+import CategoryIcon from '../components/product/CategoryIcon';
+import Button from '../components/ui/Button';
+import styles from './HomePage.module.css';
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -52,36 +17,23 @@ export default function HomePage() {
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Everything for your best friend</h1>
           <p className={styles.heroSubtitle}>
-            Find the best products for the care and well-being of your pets.
-            Premium quality at the best prices.
+            Find the best products for the care and well-being of your pets. Premium quality at the
+            best prices.
           </p>
           <div className={styles.heroBtns}>
-            <Button onClick={() => navigate("/products")}>Shop products</Button>
-            <Button variant="outline" onClick={() => navigate("/products")}>
+            <Button onClick={() => navigate('/products')}>Shop products</Button>
+            <Button variant="outline" onClick={() => navigate('/products')}>
               View deals
             </Button>
           </div>
         </div>
       </section>
-      <ServiceCard
-        image="https://images.unsplash.com/photo-1561037404-61cd46aa615b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        imageAlt="Perro recibiendo un baño"
-        title="Baño y peluquería"
-        subtitle="Perros · Todas las razas"
-        price="$25.000"
-        duration="45 minutos"
-        description="Incluye baño con shampoo hipoalergénico, corte, cepillado y perfume."
-        footnote="Recargo de $5.000 para razas grandes"
-        onSchedule={() => {}}
-      />
 
       <section className={styles.section}>
         <div className="container">
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Categories</h2>
-            <p className={styles.sectionSubtitle}>
-              Browse our catalog by pet type
-            </p>
+            <p className={styles.sectionSubtitle}>Browse our catalog by pet type</p>
           </div>
           <div className={styles.categories}>
             {categories.map((cat) => (
@@ -101,16 +53,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section
-        className={styles.section}
-        style={{ background: "var(--bg-accent)" }}
-      >
+      <section className={styles.section} style={{ background: 'var(--bg-accent)' }}>
         <div className="container">
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Deals</h2>
-            <p className={styles.sectionSubtitle}>
-              Products with special discounts
-            </p>
+            <p className={styles.sectionSubtitle}>Products with special discounts</p>
           </div>
           <ProductGrid products={featured} />
         </div>
@@ -120,13 +67,11 @@ export default function HomePage() {
         <div className="container">
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Featured products</h2>
-            <p className={styles.sectionSubtitle}>
-              The most popular items in our store
-            </p>
+            <p className={styles.sectionSubtitle}>The most popular items in our store</p>
           </div>
           <ProductGrid products={latest} />
           <div className={styles.viewAll}>
-            <Button variant="outline" onClick={() => navigate("/products")}>
+            <Button variant="outline" onClick={() => navigate('/products')}>
               View all products
             </Button>
           </div>
@@ -135,28 +80,15 @@ export default function HomePage() {
 
       <section className={styles.section}>
         <div className="container">
-          <ServiceList title="Elige un servicio" items={services} />
-        </div>
-      </section>
-
-      <section className={styles.section}>
-        <div className="container">
           <div className={styles.offerBanner}>
-            <h2 className={styles.offerTitle}>
-              Free shipping on orders over $500
-            </h2>
-            <p className={styles.offerText}>
-              Enjoy free shipping on all orders over $500 MXN
-            </p>
-            <Button onClick={() => navigate("/products")}>Shop now</Button>
+            <h2 className={styles.offerTitle}>Free shipping on orders over $500</h2>
+            <p className={styles.offerText}>Enjoy free shipping on all orders over $500 MXN</p>
+            <Button onClick={() => navigate('/products')}>Shop now</Button>
           </div>
         </div>
       </section>
 
-      <section
-        className={styles.section}
-        style={{ background: "var(--bg-accent)" }}
-      >
+      <section className={styles.section} style={{ background: 'var(--bg-accent)' }}>
         <div className="container">
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Why choose us</h2>
@@ -181,9 +113,7 @@ export default function HomePage() {
                 </svg>
               </div>
               <div className={styles.featureTitle}>Fast shipping</div>
-              <div className={styles.featureText}>
-                Delivery within 24-48 hours nationwide
-              </div>
+              <div className={styles.featureText}>Delivery within 24-48 hours nationwide</div>
             </div>
             <div className={styles.featureCard}>
               <div className={styles.featureIcon}>
@@ -201,9 +131,7 @@ export default function HomePage() {
                 </svg>
               </div>
               <div className={styles.featureTitle}>Quality guaranteed</div>
-              <div className={styles.featureText}>
-                We only work with the best brands
-              </div>
+              <div className={styles.featureText}>We only work with the best brands</div>
             </div>
             <div className={styles.featureCard}>
               <div className={styles.featureIcon}>
@@ -222,9 +150,7 @@ export default function HomePage() {
                 </svg>
               </div>
               <div className={styles.featureTitle}>Easy returns</div>
-              <div className={styles.featureText}>
-                30 days to return, no questions asked
-              </div>
+              <div className={styles.featureText}>30 days to return, no questions asked</div>
             </div>
             <div className={styles.featureCard}>
               <div className={styles.featureIcon}>
@@ -242,9 +168,7 @@ export default function HomePage() {
                 </svg>
               </div>
               <div className={styles.featureTitle}>24/7 support</div>
-              <div className={styles.featureText}>
-                Personalized assistance whenever you need it
-              </div>
+              <div className={styles.featureText}>Personalized assistance whenever you need it</div>
             </div>
           </div>
         </div>
